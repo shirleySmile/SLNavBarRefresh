@@ -24,38 +24,38 @@
 
 - (void)popViewControllerRefresh{
     
-    self.viewControllers.count > 1?[self viewControllerRefresh:self.viewControllers[self.viewControllers.count-2] previous:YES]:nil;
+    self.viewControllers.count > 1?[self viewControllerRefresh:self.viewControllers[self.viewControllers.count-2] previous:1]:nil;
     
     [self popViewControllerAnimated:YES];
     
-    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers lastObject] previous:NO]:nil;
+    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers lastObject] previous:0]:nil;
     
 }
 
 - (void)popToViewControllerRefresh:(UIViewController *)viewController{
     
-    [self viewControllerRefresh:viewController previous:YES];
+    [self viewControllerRefresh:viewController previous:1];
     
     [self popToViewController:viewController animated:YES];
     
-    [self viewControllerRefresh:viewController previous:NO];
+    [self viewControllerRefresh:viewController previous:0];
 }
 
 - (void)popToRootViewControllerRefresh{
 
-    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers firstObject] previous:YES]:nil;
+    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers firstObject] previous:1]:nil;
     
     [self popToRootViewControllerAnimated:YES];
 
-    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers firstObject] previous:NO]:nil;
+    self.viewControllers.count?[self viewControllerRefresh:[self.viewControllers firstObject] previous:0]:nil;
     
 }
 
 
-- (void)viewControllerRefresh:(UIViewController *)vc previous:(BOOL)previous{
+- (void)viewControllerRefresh:(UIViewController *)vc previous:(NSInteger)previous{
 
     switch (previous) {
-        case YES:
+        case 1:
         {
             if ([vc respondsToSelector:@selector(viewWillAppearRefresh)]) {
                 [vc viewWillAppearRefresh];
