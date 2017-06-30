@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLNavBarRefresh'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'NavBar+Refresh.'
 
 
   s.description      = <<-DESC
-0.1.0 inital data with navigationBar + refreshData
+0.1.1 inital data with navigationBar + refreshData
                        DESC
 
   s.homepage         = 'https://github.com/shirleySmile/SLNavBarRefresh'
