@@ -9,16 +9,11 @@
 Pod::Spec.new do |s|
   s.name             = 'SLNavBarRefresh'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SLNavBarRefresh.'
+  s.summary          = 'NavBar+Refresh.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+0.1.0 inital data with navigationBar + refreshData
                        DESC
 
   s.homepage         = 'https://github.com/shirleySmile/SLNavBarRefresh'
